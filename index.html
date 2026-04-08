@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lazer (pl90) — Software developer since 1997. Full-stack, HIPAA-compliant, WordPress, stock market systems, mobile apps, phone dialers, custom hardware, and CTO." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://pl90.com/" />
+  <meta property="og:title"       content="pl90 — Lazer" />
+  <meta property="og:description" content="Software developer since 1997. Full-stack, HIPAA-compliant, mobile apps, stock market systems, phone dialers, custom hardware, and CTO." />
+  <meta name="twitter:card"        content="summary" />
+  <meta name="twitter:title"       content="pl90 — Lazer" />
+  <meta name="twitter:description" content="Software developer since 1997. Full-stack web apps, HIPAA systems, mobile, hardware, dialers, and CTO across multiple stacks." />
+  <title>pl90 — Lazer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ══════ HEADER ══════ -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="pl90 — home">
+        <span class="l-bracket">&lt;</span><span class="l-name">pl<span class="l-num">90</span></span><span class="l-bracket">&nbsp;/&gt;</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#about"      class="nav-link">about</a>
+        <a href="#work"       class="nav-link">work</a>
+        <a href="#bridge"     class="nav-link">the bridge</a>
+        <a href="#industries" class="nav-link">industries</a>
+        <a href="#contact"    class="nav-link">contact</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="#about"      class="ml">about</a>
+      <a href="#work"       class="ml">work</a>
+      <a href="#bridge"     class="ml">the bridge</a>
+      <a href="#industries" class="ml">industries</a>
+      <a href="#contact"    class="ml">contact</a>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ══════ HERO ══════ -->
+  <section class="hero" id="top">
+    <!-- Particle network canvas -->
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+    <!-- Subtle grid overlay -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge reveal">
+          <span class="badge-dot"></span>
+          <span>coding since 1997</span>
+        </div>
+
+        <h1 class="hero-title reveal">
+          <span class="ht-white">I build</span>
+          <span class="ht-accent">software.</span>
+        </h1>
+
+        <p class="hero-sub reveal">
+          Full-stack web apps, HIPAA-compliant systems, mobile applications,
+          stock market platforms, custom hardware, and phone dialer systems —
+          designed, coded, and shipped solo since 1997.
+        </p>
+
+        <div class="hero-cta reveal">
+          <a href="#work"    class="btn btn-primary">What I build</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+
+        <div class="hero-chips reveal">
+          <span class="chip">Full-stack</span>
+          <span class="chip">HIPAA</span>
+          <span class="chip">Mobile apps</span>
+          <span class="chip">Hardware</span>
+          <span class="chip">CTO</span>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <!-- Terminal -->
+        <div class="terminal-window">
+          <div class="term-chrome">
+            <span class="tc-dot r"></span>
+            <span class="tc-dot y"></span>
+            <span class="tc-dot g"></span>
+            <span class="tc-title">lazer@pl90 ~ terminal</span>
+          </div>
+          <div class="term-body">
+            <div class="term-prompt">
+              <span class="tp-user">lazer</span><span class="tp-dim">@pl90</span><span class="tp-dim">:~$</span>
+              <span id="typedCmd" class="tp-cmd"></span><span id="termCursor" class="tp-cur">▋</span>
+            </div>
+            <div class="term-output" id="termOutput"></div>
+          </div>
+        </div>
+        <!-- Floating code snippet -->
+        <div class="code-float code-float--1 reveal-delay">
+          <span class="cf-dot"></span>
+          <code>if (idea.isGood()) build(it);</code>
+        </div>
+        <div class="code-float code-float--2 reveal-delay">
+          <span class="cf-dot"></span>
+          <code>return secure_endpoint(data);</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint" aria-hidden="true">
+      <span class="sh-line"></span>
+      <span class="sh-label">scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════ MARQUEE ══════ -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="mq">Full-Stack Web Apps</span><span class="mq-sep">✦</span>
+      <span class="mq">HIPAA Compliant Systems</span><span class="mq-sep">✦</span>
+      <span class="mq">Stock Market Platforms</span><span class="mq-sep">✦</span>
+      <span class="mq">WordPress &amp; Custom Plugins</span><span class="mq-sep">✦</span>
+      <span class="mq">Mobile Applications</span><span class="mq-sep">✦</span>
+      <span class="mq">Phone Dialer Systems</span><span class="mq-sep">✦</span>
+      <span class="mq">Custom Hardware Programming</span><span class="mq-sep">✦</span>
+      <span class="mq">HTML Email Design</span><span class="mq-sep">✦</span>
+      <span class="mq">Zapier / Make Alternatives</span><span class="mq-sep">✦</span>
+      <span class="mq">CTO &amp; Technical Director</span><span class="mq-sep">✦</span>
+      <span class="mq">Secure File Transfer</span><span class="mq-sep">✦</span>
+      <span class="mq">Business Automation</span><span class="mq-sep">✦</span>
+      <!-- duplicate for loop -->
+      <span class="mq">Full-Stack Web Apps</span><span class="mq-sep">✦</span>
+      <span class="mq">HIPAA Compliant Systems</span><span class="mq-sep">✦</span>
+      <span class="mq">Stock Market Platforms</span><span class="mq-sep">✦</span>
+      <span class="mq">WordPress &amp; Custom Plugins</span><span class="mq-sep">✦</span>
+      <span class="mq">Mobile Applications</span><span class="mq-sep">✦</span>
+      <span class="mq">Phone Dialer Systems</span><span class="mq-sep">✦</span>
+      <span class="mq">Custom Hardware Programming</span><span class="mq-sep">✦</span>
+      <span class="mq">HTML Email Design</span><span class="mq-sep">✦</span>
+      <span class="mq">Zapier / Make Alternatives</span><span class="mq-sep">✦</span>
+      <span class="mq">CTO &amp; Technical Director</span><span class="mq-sep">✦</span>
+      <span class="mq">Secure File Transfer</span><span class="mq-sep">✦</span>
+      <span class="mq">Business Automation</span><span class="mq-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ══════ STATS BANNER ══════ -->
+  <div class="stats-banner">
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stat-item">
+          <div class="si-value"><span class="counter" data-target="1997" data-mode="year">1997</span></div>
+          <div class="si-label">Coding since</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <div class="si-value"><span class="counter" data-target="29" data-mode="since" data-suffix="+">0</span></div>
+          <div class="si-label">Years shipping software</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <div class="si-value"><span class="counter" data-target="12" data-suffix="+">0</span></div>
+          <div class="si-label">Industries served</div>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
+          <div class="si-value"><span class="counter" data-target="5" data-suffix="×">0</span></div>
+          <div class="si-label">CTO &amp; Technical Director roles</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ ABOUT ══════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label reveal">01 / about</div>
+      <div class="about-grid">
+
+        <div class="about-left">
+          <h2 class="section-title reveal">Just a human<br/>who codes.</h2>
+
+          <p class="reveal">
+            I'm <strong class="acc">Lazer</strong> — a developer who's been writing software since <strong class="acc">1997</strong>.
+            No team, no meetings, no standing desk that costs more than a car.
+            Just clean code, interesting problems, and nearly three decades of figuring out
+            how to make computers do exactly what I want.
+          </p>
+          <p class="reveal">
+            I've served as <strong class="acc">CTO and Technical Director</strong> on multiple software stacks —
+            setting technical direction, architecting systems, defining what the product needs to be,
+            and making sure the engineering matched it. Not someone executing other people's decisions.
+            The one making them.
+          </p>
+          <p class="reveal">
+            Beyond software, I've designed and programmed <strong class="acc">custom hardware</strong> for several
+            different projects — circuit design, firmware, the whole thing. When the part you need doesn't
+            exist as a product, you build the product.
+          </p>
+          <p class="reveal">
+            I write software for personal use and whatever catches my curiosity.
+            If it can be automated, scripted, built, or wired together —
+            I'm probably already working on it at an unreasonable hour.
+          </p>
+
+          <div class="about-sig reveal">
+            <span class="sig-sym">$</span>
+            <span>This site? Designed and built that too.</span>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="stat-grid reveal">
+            <div class="sg-card">
+              <div class="sg-label">Name</div>
+              <div class="sg-val">Lazer</div>
+            </div>
+            <div class="sg-card">
+              <div class="sg-label">Handle</div>
+              <div class="sg-val">pl90</div>
+            </div>
+            <div class="sg-card">
+              <div class="sg-label">Since</div>
+              <div class="sg-val acc">1997</div>
+            </div>
+            <div class="sg-card">
+              <div class="sg-label">Stack</div>
+              <div class="sg-val">Full-stack</div>
+            </div>
+            <div class="sg-card">
+              <div class="sg-label">Mode</div>
+              <div class="sg-val">Solo / Indie</div>
+            </div>
+            <div class="sg-card">
+              <div class="sg-label">Status</div>
+              <div class="sg-val"><span class="pulse-dot"></span>Writing code</div>
+            </div>
+          </div>
+
+          <div class="cap-list reveal">
+            <div class="cap-row"><span class="cap-d"></span>Full-stack web applications</div>
+            <div class="cap-row"><span class="cap-d"></span>HIPAA-compliant software &amp; secure endpoints</div>
+            <div class="cap-row"><span class="cap-d"></span>WordPress sites &amp; custom plugins</div>
+            <div class="cap-row"><span class="cap-d"></span>Stock market &amp; trading systems</div>
+            <div class="cap-row"><span class="cap-d"></span>Mobile applications (iOS &amp; Android)</div>
+            <div class="cap-row"><span class="cap-d"></span>Phone dialer systems (VoIP / auto-dialers)</div>
+            <div class="cap-row"><span class="cap-d"></span>Custom hardware design &amp; programming</div>
+            <div class="cap-row"><span class="cap-d"></span>HTML email design &amp; development</div>
+            <div class="cap-row"><span class="cap-d"></span>CRM &amp; platform integrations</div>
+            <div class="cap-row"><span class="cap-d"></span>Make / Zapier alternative builds</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ WORK ══════ -->
+  <section class="section work" id="work">
+    <div class="container">
+      <div class="section-label reveal">02 / work</div>
+      <h2 class="section-title reveal">Built for the<br/>real world.</h2>
+      <p class="section-sub reveal">Custom software across the full stack — not templates, not copy-paste. Purpose-built solutions that solve the actual problem in front of you.</p>
+
+      <div class="pillars">
+
+        <div class="pillar reveal">
+          <div class="pnum">01</div>
+          <h3 class="ptitle">Full-Stack Web Applications</h3>
+          <p class="pbody">End-to-end applications — databases, APIs, backends, frontends, auth, the works. Built to handle real-world load, not just the demo day crowd.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">02</div>
+          <h3 class="ptitle">HIPAA-Compliant Software &amp; Secure Endpoints</h3>
+          <p class="pbody">Healthcare-grade software built to HIPAA standards, including secure endpoints for file and data transfer. Encryption, audit trails, access controls — done properly, not as an afterthought.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">03</div>
+          <h3 class="ptitle">WordPress — Sites, Plugins &amp; Workflows</h3>
+          <p class="pbody">Custom-designed WordPress sites with bespoke plugins built from scratch. Clean code, no bloated builders, and workflows built specifically around how each site needs to run day-to-day.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">04</div>
+          <h3 class="ptitle">Stock Market &amp; Trading Systems</h3>
+          <p class="pbody">Full-stack systems for the stock market — data feeds, order logic, dashboards, reporting. Fast, reliable, and stress-tested well before real money is involved.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">05</div>
+          <h3 class="ptitle">Mobile Applications</h3>
+          <p class="pbody">Native and cross-platform mobile apps built to ship on iOS and Android. From concept to app store — the whole stack, mobile-first.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">06</div>
+          <h3 class="ptitle">Phone Dialer Systems</h3>
+          <p class="pbody">Custom VoIP and auto-dialer systems — predictive dialers, click-to-call, IVR, call routing, and reporting. Built around your operation, not the other way around.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">07</div>
+          <h3 class="ptitle">Custom Hardware &amp; Firmware</h3>
+          <p class="pbody">Designed and programmed custom hardware for several different projects — schematics, PCB, firmware, the works. Not every problem has an off-the-shelf answer. Some of them need a bespoke one with solder on it.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">08</div>
+          <h3 class="ptitle">HTML Email Design &amp; Development</h3>
+          <p class="pbody">Pixel-perfect HTML emails that actually render — across Gmail, Outlook, Apple Mail, and the rest of the email client zoo. Responsive, on-brand, and landing in inboxes.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">09</div>
+          <h3 class="ptitle">Custom Integrations — Own It Forever</h3>
+          <p class="pbody">Instead of paying Make or Zapier for every task run, I build bespoke integration software that does the same job — permanently, on your infrastructure, for a fraction of the ongoing cost.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">10</div>
+          <h3 class="ptitle">CRM &amp; Platform Engineering</h3>
+          <p class="pbody">Custom software built around your existing CRM so it works exactly the way your business needs — even if that feature technically doesn't exist in the platform. It does now.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">11</div>
+          <h3 class="ptitle">Business Automation</h3>
+          <p class="pbody">Repetitive tasks are for computers. Scripts, pipelines, and scheduled processes that just run — quietly doing the thing you'd otherwise be doing manually at 9pm on a Thursday.</p>
+        </div>
+
+        <div class="pillar reveal">
+          <div class="pnum">12</div>
+          <h3 class="ptitle">Personal Projects</h3>
+          <p class="pbody">Hobby builds, experiments, and things that exist purely because they're interesting to make. No client. No brief. No one to answer to at standup. Just code and curiosity.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CTO BAND ══════ -->
+  <section class="cto-band" aria-label="CTO and Technical Director">
+    <div class="cto-svg-wrap" aria-hidden="true">
+      <svg class="cto-svg" viewBox="0 0 900 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path class="svg-circuit" d="M0,60 L80,60 L100,40 L200,40 L220,60 L350,60 L370,80 L420,80 L440,60 L550,60 L570,40 L650,40 L670,60 L780,60 L800,40 L900,40" fill="none" stroke="rgba(0,229,160,0.3)" stroke-width="1.5"/>
+        <path class="svg-circuit svg-circuit--2" d="M0,80 L60,80 L80,60 L180,60 L200,80 L280,80 L300,40 L400,40 L420,80 L520,80 L540,60 L640,60 L660,80 L760,80 L780,60 L900,60" fill="none" stroke="rgba(0,229,160,0.15)" stroke-width="1"/>
+        <circle class="svg-node" cx="100" cy="40" r="3" fill="#00e5a0" opacity="0.6"/>
+        <circle class="svg-node" cx="220" cy="60" r="3" fill="#00e5a0" opacity="0.6"/>
+        <circle class="svg-node" cx="370" cy="80" r="3" fill="#00e5a0" opacity="0.6"/>
+        <circle class="svg-node" cx="570" cy="40" r="3" fill="#00e5a0" opacity="0.6"/>
+        <circle class="svg-node" cx="670" cy="60" r="3" fill="#00e5a0" opacity="0.6"/>
+        <circle class="svg-node" cx="800" cy="40" r="3" fill="#00e5a0" opacity="0.6"/>
+        <!-- Animated nodes pulse via CSS -->
+      </svg>
+    </div>
+    <div class="container">
+      <div class="cto-inner reveal">
+        <div class="cto-badge">CTO &amp; Technical Director</div>
+        <h2 class="cto-title">I've been the person<br/>who defines what gets built.</h2>
+        <p class="cto-body">
+          On multiple software stacks, I've served as CTO and Technical Director —
+          the person deciding what the product actually is, how it's structured, what gets built first,
+          and why the architecture works the way it does. Setting direction, designing systems,
+          defining features, and guiding teams from whiteboard to shipped software.
+          Not just a coder who got promoted. The technical decision-maker from day one.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="integration-band" aria-label="Custom integrations alternative to Make and Zapier">
+    <div class="container">
+      <div class="ib-inner reveal">
+        <div class="ib-tag">// stop the recurring bill</div>
+        <h2 class="ib-title">Make &amp; Zapier charge you<br/>every time something runs.</h2>
+        <p class="ib-body">I build the same integrations as standalone software — connecting systems, automating workflows, syncing data — with no usage fees, no task limits, no lock-in. Own it outright. At any real volume, the savings are immediate and compound forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ THE BRIDGE ══════ -->
+  <section class="section bridge" id="bridge">
+    <div class="container">
+      <div class="section-label reveal">03 / the bridge</div>
+      <div class="bridge-grid">
+        <div class="bridge-left reveal">
+          <h2 class="section-title">Your software.<br/>Your rules.</h2>
+          <p>Every business has a system they're committed to — a CRM, a platform, a tool that does 80% of what they need. That other 20%? It either doesn't exist, costs extra, or can't be configured to match how you actually operate.</p>
+          <p>I build custom software that wraps around, extends, or bridges your existing platform — so it behaves exactly the way it should have from day one. No vendor tickets. No workarounds. No "that's not a feature we offer."</p>
+          <p>If a part of your workflow can't be done inside the system, I build the layer that makes it happen — and makes it feel like it was always there.</p>
+        </div>
+        <div class="bridge-steps reveal">
+          <div class="bstep"><span class="bsn">01</span><div><h4>Identify the gap</h4><p>Find exactly where the platform falls short of what the business needs.</p></div></div>
+          <div class="bstep"><span class="bsn">02</span><div><h4>Build the extension</h4><p>Custom plugin, integration, or standalone tool that fills it precisely.</p></div></div>
+          <div class="bstep"><span class="bsn">03</span><div><h4>Connect it cleanly</h4><p>Wired into the existing workflow so it feels native, not bolted on.</p></div></div>
+          <div class="bstep"><span class="bsn">04</span><div><h4>System complete</h4><p>No more workarounds. No manual gaps. Just the process, working.</p></div></div>
+        </div>
+      </div>
+      <div class="be-wrap reveal">
+        <div class="be-label">// examples of gaps I've filled</div>
+        <div class="be-grid">
+          <div class="be">Custom CRM fields &amp; logic the platform doesn't natively support</div>
+          <div class="be">WordPress plugins that fully replace paid third-party services</div>
+          <div class="be">Workflows connecting systems with no official integration</div>
+          <div class="be">HIPAA-compliant data pipelines where standard tools wouldn't qualify</div>
+          <div class="be">Stock market data feeds wired to internal reporting dashboards</div>
+          <div class="be">Billing logic layered onto systems not originally built for it</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ INDUSTRIES ══════ -->
+  <section class="section industries" id="industries">
+    <div class="container">
+      <div class="section-label reveal">04 / industries</div>
+      <h2 class="section-title reveal">Shipped across<br/>industries.</h2>
+      <p class="section-sub reveal">Full-stack applications delivered for businesses with absolutely nothing in common — except they needed software that actually worked. Turns out that's universal.</p>
+
+      <div class="ind-grid">
+        <div class="ind-card reveal"><span class="ii">🏥</span><span class="in">Medical &amp; HIPAA</span><span class="inote">Secure, compliant, and built to standards that actually matter</span></div>
+        <div class="ind-card reveal"><span class="ii">🧾</span><span class="in">Billing</span><span class="inote">Numbers in, numbers out, nobody angry — the dream</span></div>
+        <div class="ind-card reveal"><span class="ii">📈</span><span class="in">Stock Market &amp; Trading</span><span class="inote">Full-stack systems built for market data, orders, and reporting</span></div>
+        <div class="ind-card reveal"><span class="ii">🏗️</span><span class="in">Steel Fabrication</span><span class="inote">Full-stack operations software for a world built in steel</span></div>
+        <div class="ind-card reveal"><span class="ii">🚛</span><span class="in">Demolition &amp; Rubbish Removal</span><span class="inote">Scheduling, dispatch, and job tracking for work that happens on-site and in trucks</span></div>
+        <div class="ind-card reveal"><span class="ii">📱</span><span class="in">Mobile Applications</span><span class="inote">iOS &amp; Android — built to ship and built to work</span></div>
+        <div class="ind-card reveal"><span class="ii">☎️</span><span class="in">Phone Dialer Systems</span><span class="inote">VoIP, auto-dialers, IVR, and call routing — custom-built</span></div>
+        <div class="ind-card reveal"><span class="ii">🛎️</span><span class="in">Service</span><span class="inote">End-to-end ops — CRM, scheduling, and customer management without the gaps</span></div>
+        <div class="ind-card reveal"><span class="ii">📡</span><span class="in">Communications</span><span class="inote">Systems that send, receive, and process — without drama</span></div>
+        <div class="ind-card reveal"><span class="ii">✉️</span><span class="in">HTML Email</span><span class="inote">Designed and built to render correctly everywhere</span></div>
+        <div class="ind-card reveal"><span class="ii">🔩</span><span class="in">Custom Hardware</span><span class="inote">Schematics, PCB design, firmware — built from scratch for specific problems</span></div>
+        <div class="ind-card reveal"><span class="ii">⚙️</span><span class="in">&amp; Many More</span><span class="inote">If it's worth solving, the industry is just a detail</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CONTACT ══════ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label reveal">05 / contact</div>
+      <div class="contact-wrap">
+
+        <div class="contact-left reveal">
+          <h2 class="section-title">Say hello.</h2>
+
+          <!-- Availability note -->
+          <div class="avail-note">
+            <div class="avail-icon">💡</div>
+            <div class="avail-text">
+              <strong>I don't usually take on new work</strong> — but I'm always happy to hear your idea,
+              talk through a problem, or point you in the right direction.
+              Sometimes the most valuable conversation is figuring out who to call.
+              Drop a message either way.
+            </div>
+          </div>
+
+          <p>No chatbots. No auto-responders. No sales team routing your email to someone who'll call at the worst possible moment. Just a human on the other end.</p>
+          <div class="cn-note">
+            <span class="cn-sym">$</span>
+            <span>No spam. No newsletters. Humans only.</span>
+          </div>
+          <div class="legal-links">
+            <a href="terms.html"   class="ll">Terms of Use</a>
+            <span class="ll-sep">·</span>
+            <a href="privacy.html" class="ll">Privacy Policy</a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm"
+              action="https://formspree.io/f/xvzvykkd"
+              method="POST" novalidate>
+
+          <!-- HONEYPOTS -->
+          <div class="hp-trap" aria-hidden="true">
+            <input type="text" name="hp_website" tabindex="-1" autocomplete="off" />
+            <input type="text" name="hp_phone"   tabindex="-1" autocomplete="off" />
+            <input type="text" name="hp_company" tabindex="-1" autocomplete="off" />
+            <input type="url"  name="hp_url"     tabindex="-1" autocomplete="off" />
+          </div>
+
+          <!-- METADATA -->
+          <input type="hidden" id="meta_loaded_at"    name="_form_loaded_at"       value="" />
+          <input type="hidden" id="meta_session_id"   name="_session_id"           value="" />
+          <input type="hidden" id="meta_ip"           name="_visitor_ip"           value="" />
+          <input type="hidden" id="meta_city"         name="_visitor_city"         value="" />
+          <input type="hidden" id="meta_region"       name="_visitor_region"       value="" />
+          <input type="hidden" id="meta_country"      name="_visitor_country"      value="" />
+          <input type="hidden" id="meta_postal"       name="_visitor_postal"       value="" />
+          <input type="hidden" id="meta_lat"          name="_visitor_lat"          value="" />
+          <input type="hidden" id="meta_lon"          name="_visitor_lon"          value="" />
+          <input type="hidden" id="meta_isp"          name="_visitor_isp"          value="" />
+          <input type="hidden" id="meta_org"          name="_visitor_org"          value="" />
+          <input type="hidden" id="meta_asn"          name="_visitor_asn"          value="" />
+          <input type="hidden" id="meta_tz"           name="_visitor_timezone"     value="" />
+          <input type="hidden" id="meta_ua"           name="_browser_ua"           value="" />
+          <input type="hidden" id="meta_lang"         name="_browser_language"     value="" />
+          <input type="hidden" id="meta_langs"        name="_browser_languages"    value="" />
+          <input type="hidden" id="meta_platform"     name="_browser_platform"     value="" />
+          <input type="hidden" id="meta_vendor"       name="_browser_vendor"       value="" />
+          <input type="hidden" id="meta_screen"       name="_screen_resolution"    value="" />
+          <input type="hidden" id="meta_depth"        name="_screen_color_depth"   value="" />
+          <input type="hidden" id="meta_viewport"     name="_viewport_size"        value="" />
+          <input type="hidden" id="meta_dpr"          name="_device_pixel_ratio"   value="" />
+          <input type="hidden" id="meta_colorscheme"  name="_color_scheme"         value="" />
+          <input type="hidden" id="meta_touch"        name="_touch_support"        value="" />
+          <input type="hidden" id="meta_touchpts"     name="_max_touch_points"     value="" />
+          <input type="hidden" id="meta_cookies"      name="_cookies_enabled"      value="" />
+          <input type="hidden" id="meta_dnt"          name="_do_not_track"         value="" />
+          <input type="hidden" id="meta_conn"         name="_connection_type"      value="" />
+          <input type="hidden" id="meta_speed"        name="_connection_speed"     value="" />
+          <input type="hidden" id="meta_cores"        name="_hardware_concurrency" value="" />
+          <input type="hidden" id="meta_memory"       name="_device_memory_gb"     value="" />
+          <input type="hidden" id="meta_url"          name="_page_url"             value="" />
+          <input type="hidden" id="meta_referrer"     name="_page_referrer"        value="" />
+          <input type="hidden" id="meta_title"        name="_page_title"           value="" />
+          <input type="hidden" id="meta_submit_ts"    name="_submit_timestamp"     value="" />
+          <input type="hidden" id="meta_time_on_page" name="_time_on_page_s"       value="" />
+          <input type="hidden" id="meta_agreed"       name="_agreed_to_terms"      value="false" />
+          <input type="hidden" id="meta_agreed_at"    name="_agreed_at"            value="" />
+          <input type="hidden" name="_subject" value="[pl90.com] New contact message" />
+
+          <!-- VISIBLE FIELDS -->
+          <div class="frow">
+            <div class="fg">
+              <label for="fname">name <span class="req">*</span></label>
+              <input type="text"  id="fname"  name="name"    placeholder="your name"      required autocomplete="name"  maxlength="100" />
+              <span class="ferr" id="nameErr"></span>
+            </div>
+            <div class="fg">
+              <label for="femail">email <span class="req">*</span></label>
+              <input type="email" id="femail" name="email"   placeholder="your@email.com" required autocomplete="email" maxlength="200" />
+              <span class="ferr" id="emailErr"></span>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label for="fsubject">subject</label>
+            <input type="text" id="fsubject" name="subject" placeholder="what's it about?" autocomplete="off" maxlength="200" />
+          </div>
+
+          <div class="fg">
+            <label for="fmessage">message <span class="req">*</span></label>
+            <textarea id="fmessage" name="message" rows="5" placeholder="write something..." required maxlength="5000"></textarea>
+            <div class="ff-row">
+              <span class="ferr" id="msgErr"></span>
+              <span class="ccount" id="charCount">0 / 5000</span>
+            </div>
+          </div>
+
+          <div class="fg agree-fg">
+            <label class="agree-lbl" for="agreeTerms">
+              <input type="checkbox" id="agreeTerms" name="agree_terms" required />
+              <span class="abox"></span>
+              <span class="atxt">
+                I agree to the
+                <a href="terms.html"   target="_blank" class="flink">Terms of Use</a>
+                and
+                <a href="privacy.html" target="_blank" class="flink">Privacy Policy</a>.
+                I understand this form collects contact details and technical metadata to enable a response.
+              </span>
+            </label>
+            <span class="ferr" id="agreeErr"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+            <span id="btnText">send message</span>
+            <span id="btnLoading" style="display:none;"><span class="spin"></span>sending…</span>
+          </button>
+
+          <div class="fb fb-ok"   id="formSuccess"   role="alert" aria-live="polite"><span class="fbi">✓</span><div><strong>Message received.</strong><br/><small>I'll get back to you — probably faster than you expect.</small></div></div>
+          <div class="fb fb-err"  id="formError"     role="alert" aria-live="assertive"><span class="fbi">✗</span><div><strong>Something went wrong.</strong><br/><small id="formErrorMsg">Please try again.</small></div></div>
+          <div class="fb fb-warn" id="formRateLimit" role="alert" aria-live="assertive"><span class="fbi">⚠</span><div><strong>Slow down there.</strong><br/><small>You sent a message recently. Try again in a few minutes.</small></div></div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <a href="index.html" class="logo">
+          <span class="l-bracket">&lt;</span><span class="l-name">pl<span class="l-num">90</span></span><span class="l-bracket">&nbsp;/&gt;</span>
+        </a>
+        <div class="footer-links">
+          <a href="terms.html"   class="fl">Terms</a>
+          <span class="fl-sep">·</span>
+          <a href="privacy.html" class="fl">Privacy</a>
+        </div>
+        <span class="footer-copy">// designed &amp; programmed by Lazer</span>
+        <span class="footer-yr" id="footerYear"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
